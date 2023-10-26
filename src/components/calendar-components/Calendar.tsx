@@ -37,7 +37,7 @@ const Calendar = () => {
   const { loading, error, data } = useQuery(GET_COMMITS, {
     context: {
       headers: {
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer [INSERT_TOKEN_HERE]`,
       },
     },
   });

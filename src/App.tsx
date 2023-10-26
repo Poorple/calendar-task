@@ -1,7 +1,7 @@
 import "./App.css";
 import Calendar from "./components/calendar-components/Calendar";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Importing Route and Routes
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const client = new ApolloClient({
   uri: "https://api.github.com/graphql",

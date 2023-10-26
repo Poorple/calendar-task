@@ -38,8 +38,6 @@ const DayGrid: FC<IDayGridProps> = (props) => {
   };
   const commitsArray = Array.isArray(commitsData) ? commitsData : [commitsData];
 
-  console.log(commitsData);
-
   return (
     <>
       <div className="big-day-wrap">
