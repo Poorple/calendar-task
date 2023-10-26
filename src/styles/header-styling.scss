@@ -1,0 +1,19 @@
+.wrap{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-bottom:0.5rem;
+    width:16rem;
+    place-items: center;
+    button{
+        height:1.75rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background:#E8E8E8;
+        color:#000000;
+        div{
+            color:#000000;
+        }
+    }
+    
+}
