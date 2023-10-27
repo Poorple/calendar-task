@@ -1,4 +1,4 @@
-export const DAYS=["Monday","Tuesday","Wendsday","Thursday","Friday","Saturday","Sunday"];
+export const DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 
 export const getDaysInMonth = (date: Date) => {
   return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();

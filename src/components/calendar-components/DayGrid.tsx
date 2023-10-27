@@ -38,8 +38,6 @@ const DayGrid: FC<IDayGridProps> = (props) => {
   };
   const commitsArray = Array.isArray(commitsData) ? commitsData : [commitsData];
 
-  console.log(commitsData);
-
   return (
     <>
       <div className="big-day-wrap">
@@ -50,18 +48,20 @@ const DayGrid: FC<IDayGridProps> = (props) => {
         ))}
       </div>
       <div className="small-day-wrap">
-        {getSortedDays(currentDate).map((day) => (
-          <article className="small-day-s" key={day}>
+        {getSortedDays(currentDate).map((day, index) => (
+          <article className="small-day-s" key={index}>
             <p className="day-num-in-month">{day}</p>
             {commitsArray.map((x: Edge) => {
               if (
                 new Date(x.node.author.date).getDate() === day &&
                 new Date(x.node.author.date).getMonth() ===
-                  currentDate.getMonth()
+                  currentDate.getMonth() &&
+                new Date(x.node.author.date).getFullYear() ===
+                  currentDate.getFullYear()
               ) {
                 return (
                   <div
-                    key={x.node.message}
+                    key={x.node.author.date.toString()}
                     onClick={() =>
                       moreData(
                         new Date(x.node.author.date),
